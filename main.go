@@ -10,7 +10,7 @@ import (
 
 func main() {
 	utils.LoadTemplates("templates/*.html")
-	r := routes.NewRouter()
+	r := routes.StandartRouter()
 	http.Handle("/", r)
 	fmt.Println("Server activated")
 	http.ListenAndServe(":8080", nil)
